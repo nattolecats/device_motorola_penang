@@ -29,6 +29,7 @@ import init.recovery.${ro.boot.device}.rc
 
 on init
     setprop sys.usb.configfs 1
+    start init-recovery-qcom-sh
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -37,3 +38,6 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+service init-recovery-qcom-sh /init.recovery.qcom.sh
+    disabled

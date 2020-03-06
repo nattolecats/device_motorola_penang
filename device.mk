@@ -445,6 +445,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.recovery.usb.adb.pid=2E81 \
     ro.recovery.usb.fastboot.pid=2E81
 
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.sh
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
