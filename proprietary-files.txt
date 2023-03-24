@@ -458,6 +458,8 @@ vendor/usr/keylayout/uinput-fpc.kl
 vendor/usr/keylayout/uinput_nav.kl
 
 # FM
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -1327,7 +1329,6 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -1589,7 +1590,6 @@ vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
 vendor/lib64/motorola.hardware.fdrcontrol@1.0.so
 vendor/lib64/motorola.hardware.fdrcontrol@1.1.so
 vendor/lib64/motorola.hardware.fdrcontrol@1.2.so
-vendor/lib64/motorola.hardware.fmradio@1.0.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
 vendor/lib64/motorola.hardware.health@2.0.so
 vendor/lib64/motorola.hardware.input@1.0.so
@@ -1650,7 +1650,6 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
@@ -1733,7 +1732,6 @@ vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.eid@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib/hw/vulkan.adreno.so
@@ -2100,7 +2098,6 @@ vendor/lib/vendor.qti.hardware.data.lce@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib/vendor.qti.hardware.eid@1.0.so
 
-vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so
