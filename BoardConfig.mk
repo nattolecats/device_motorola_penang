@@ -204,7 +204,7 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2022-10-01
+VENDOR_SECURITY_PATCH := 2023-01-01
 
 # SELinux
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
