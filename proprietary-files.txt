@@ -580,6 +580,7 @@ vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-mtp-SN100.conf
 vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
 vendor/etc/libnfc-nci-st.conf
+vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 vendor/etc/st21nfc_conf_ds.txt
@@ -1630,7 +1631,6 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 vendor/lib64/motorola.hardware.wifi.supplicant@1.1.so
-vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/sensors.moto.so
 vendor/lib64/sensors.ssc.so
 
@@ -2067,7 +2067,6 @@ vendor/lib/libxtwifi_server_protocol_uri_v3.so
 vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
 vendor/lib/motorola.hardware.tcmd@1.0.so
 vendor/lib/motorola.hardware.vibrator@1.0.so
-vendor/lib/nfc_nci.st21nfc.st.so
 vendor/lib/qcrilMarshal.so
 vendor/lib/qcrild_libqcrilnrutils.so
 vendor/lib/qtiril-utils.so
