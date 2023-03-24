@@ -1,6 +1,12 @@
 # All unpinned blobs below are extracted from corfur_g 12 S2RUBS32.51-15-9-3 cd476e release-keys.
 
 # ACDB Data
+vendor/etc/acdbdata/nn_ns_models/candidate__2.7.20__3.0.0_0.0__eai_v1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.6.1_0.0__eai_v1.10.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/Bluetooth_cal.acdb
 vendor/etc/acdbdata/General_cal.acdb
 vendor/etc/acdbdata/Global_cal.acdb
@@ -9,12 +15,6 @@ vendor/etc/acdbdata/Hdmi_cal.acdb
 vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/nn_ns_models/candidate__2.7.20__3.0.0_0.0__eai_v1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.6.1_0.0__eai_v1.10.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 
 # ADSP
 vendor/bin/adsprpcd
@@ -150,52 +150,6 @@ system/lib64/libaptXHD_encoder.so
 system/lib64/libaptX_encoder.so
 
 # Camera
-vendor/lib/libcamera_nn_stub.so
-vendor/lib/libcamerapostproc.so
-vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcamxfacialfeatures.so
-vendor/lib/libcamxfdalgo.so
-vendor/lib/libcamxfdengine.so
-vendor/lib/libcamxifestriping.so
-vendor/lib/libcamximageformatutils.so
-vendor/lib/libcamxqsatalgo.so
-vendor/lib/libcamxstatscore.so
-vendor/lib/libcamxswispiqmodule.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
-vendor/lib64/libcamera_nn_stub.so
-vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxexternalformatutils.so
-vendor/lib64/libcamxfacialfeatures.so
-vendor/lib64/libcamxfdalgo.so
-vendor/lib64/libcamxfdengine.so
-vendor/lib64/libcamxifestriping.so
-vendor/lib64/libcamximageformatutils.so
-vendor/lib64/libcamxqsatalgo.so
-vendor/lib64/libcamxstatscore.so
-vendor/lib64/libcamxswispiqmodule.so
-vendor/lib64/libcamxswprocessalgo.so
-vendor/lib64/libcamxtintlessalgo.so
-
-vendor/lib/camera/com.mot.eeprom.mot_corfup_gc02m1_otp.so
-vendor/lib/camera/com.mot.eeprom.mot_corfup_ov16a1q_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_corfup_s5k4h7_otp.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
-vendor/lib/camera/com.qti.flash.aw36518.so
-vendor/lib/camera/com.qti.sensor.mot_gc02m1.so
-vendor/lib/camera/com.qti.sensor.mot_ov16a1q.so
-vendor/lib/camera/com.qti.sensor.mot_s5k4h7.so
-vendor/lib/camera/com.qti.sensor.mot_s5kjn1.so
-vendor/lib/camera/com.qti.sensormodule.mot_corfup_gc02m1_sunwin.bin
-vendor/lib/camera/com.qti.sensormodule.mot_corfup_ov16a1q_qtech.bin
-vendor/lib/camera/com.qti.sensormodule.mot_corfup_s5k4h7_qtech_ff.bin
-vendor/lib/camera/com.qti.sensormodule.mot_corfup_s5kjn1_qtech.bin
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.mot_corfup_gc02m1.bin
-vendor/lib/camera/com.qti.tuned.mot_corfup_ov16a1q.bin
-vendor/lib/camera/com.qti.tuned.mot_corfup_ov16a1q_pnl.bin
-vendor/lib/camera/com.qti.tuned.mot_corfup_s5k4h7ff.bin
-vendor/lib/camera/com.qti.tuned.mot_corfup_s5kjn1.bin
 vendor/lib/camera/components/com.mot.node.dc_capture.so
 vendor/lib/camera/components/com.mot.node.dc_preview.so
 vendor/lib/camera/components/com.qti.camx.chiiqutils.so
@@ -248,29 +202,42 @@ vendor/lib/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib/camera/components/com.vidhance.node.ica.so
 vendor/lib/camera/components/com.vidhance.node.processing.so
 vendor/lib/camera/components/com.vidhance.stats.aec_dmbr.so
+vendor/lib/camera/com.mot.eeprom.mot_corfup_gc02m1_otp.so
+vendor/lib/camera/com.mot.eeprom.mot_corfup_ov16a1q_eeprom.so
+vendor/lib/camera/com.mot.eeprom.mot_corfup_s5k4h7_otp.so
+vendor/lib/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
+vendor/lib/camera/com.qti.flash.aw36518.so
+vendor/lib/camera/com.qti.sensor.mot_gc02m1.so
+vendor/lib/camera/com.qti.sensor.mot_ov16a1q.so
+vendor/lib/camera/com.qti.sensor.mot_s5k4h7.so
+vendor/lib/camera/com.qti.sensor.mot_s5kjn1.so
+vendor/lib/camera/com.qti.sensormodule.mot_corfup_gc02m1_sunwin.bin
+vendor/lib/camera/com.qti.sensormodule.mot_corfup_ov16a1q_qtech.bin
+vendor/lib/camera/com.qti.sensormodule.mot_corfup_s5k4h7_qtech_ff.bin
+vendor/lib/camera/com.qti.sensormodule.mot_corfup_s5kjn1_qtech.bin
+vendor/lib/camera/com.qti.tuned.default.bin
+vendor/lib/camera/com.qti.tuned.mot_corfup_gc02m1.bin
+vendor/lib/camera/com.qti.tuned.mot_corfup_ov16a1q.bin
+vendor/lib/camera/com.qti.tuned.mot_corfup_ov16a1q_pnl.bin
+vendor/lib/camera/com.qti.tuned.mot_corfup_s5k4h7ff.bin
+vendor/lib/camera/com.qti.tuned.mot_corfup_s5kjn1.bin
 vendor/lib/camera/fdconfigpreview.bin
 vendor/lib/camera/fdconfigpreviewlite.bin
 vendor/lib/camera/fdconfigvideo.bin
 vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib64/camera/com.mot.eeprom.mot_corfup_gc02m1_otp.so
-vendor/lib64/camera/com.mot.eeprom.mot_corfup_ov16a1q_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_corfup_s5k4h7_otp.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
-vendor/lib64/camera/com.qti.flash.aw36518.so
-vendor/lib64/camera/com.qti.sensor.mot_gc02m1.so
-vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so
-vendor/lib64/camera/com.qti.sensor.mot_s5k4h7.so
-vendor/lib64/camera/com.qti.sensor.mot_s5kjn1.so
-vendor/lib64/camera/com.qti.sensormodule.mot_corfup_gc02m1_sunwin.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_corfup_ov16a1q_qtech.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_corfup_s5k4h7_qtech_ff.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_corfup_s5kjn1_qtech.bin
-vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.mot_corfup_gc02m1.bin
-vendor/lib64/camera/com.qti.tuned.mot_corfup_ov16a1q.bin
-vendor/lib64/camera/com.qti.tuned.mot_corfup_ov16a1q_pnl.bin
-vendor/lib64/camera/com.qti.tuned.mot_corfup_s5k4h7ff.bin
-vendor/lib64/camera/com.qti.tuned.mot_corfup_s5kjn1.bin
+vendor/lib/libcamera_nn_stub.so
+vendor/lib/libcamerapostproc.so
+vendor/lib/libcamxexternalformatutils.so
+vendor/lib/libcamxfacialfeatures.so
+vendor/lib/libcamxfdalgo.so
+vendor/lib/libcamxfdengine.so
+vendor/lib/libcamxifestriping.so
+vendor/lib/libcamximageformatutils.so
+vendor/lib/libcamxqsatalgo.so
+vendor/lib/libcamxstatscore.so
+vendor/lib/libcamxswispiqmodule.so
+vendor/lib/libcamxswprocessalgo.so
+vendor/lib/libcamxtintlessalgo.so
 vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so
 vendor/lib64/camera/components/com.mot.node.dc_capture.so
 vendor/lib64/camera/components/com.mot.node.dc_preview.so
@@ -325,10 +292,42 @@ vendor/lib64/camera/components/com.vidhance.node.ica.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
+vendor/lib64/camera/com.mot.eeprom.mot_corfup_gc02m1_otp.so
+vendor/lib64/camera/com.mot.eeprom.mot_corfup_ov16a1q_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_corfup_s5k4h7_otp.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
+vendor/lib64/camera/com.qti.flash.aw36518.so
+vendor/lib64/camera/com.qti.sensor.mot_gc02m1.so
+vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so
+vendor/lib64/camera/com.qti.sensor.mot_s5k4h7.so
+vendor/lib64/camera/com.qti.sensor.mot_s5kjn1.so
+vendor/lib64/camera/com.qti.sensormodule.mot_corfup_gc02m1_sunwin.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_corfup_ov16a1q_qtech.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_corfup_s5k4h7_qtech_ff.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_corfup_s5kjn1_qtech.bin
+vendor/lib64/camera/com.qti.tuned.default.bin
+vendor/lib64/camera/com.qti.tuned.mot_corfup_gc02m1.bin
+vendor/lib64/camera/com.qti.tuned.mot_corfup_ov16a1q.bin
+vendor/lib64/camera/com.qti.tuned.mot_corfup_ov16a1q_pnl.bin
+vendor/lib64/camera/com.qti.tuned.mot_corfup_s5k4h7ff.bin
+vendor/lib64/camera/com.qti.tuned.mot_corfup_s5kjn1.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
+vendor/lib64/libcamera_nn_stub.so
+vendor/lib64/libcamerapostproc.so
+vendor/lib64/libcamxexternalformatutils.so
+vendor/lib64/libcamxfacialfeatures.so
+vendor/lib64/libcamxfdalgo.so
+vendor/lib64/libcamxfdengine.so
+vendor/lib64/libcamxifestriping.so
+vendor/lib64/libcamximageformatutils.so
+vendor/lib64/libcamxqsatalgo.so
+vendor/lib64/libcamxstatscore.so
+vendor/lib64/libcamxswispiqmodule.so
+vendor/lib64/libcamxswprocessalgo.so
+vendor/lib64/libcamxtintlessalgo.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -570,8 +569,8 @@ vendor/lib64/vendor.qti.hardware.eid@1.0.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/fpc_ident
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/usr/idc/uinput-fpc.idc
 vendor/usr/idc/uinput_nav.idc
 vendor/usr/keylayout/uinput-fpc.kl
@@ -743,12 +742,12 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/video_system_specs.json
 vendor/etc/media_blair/video_system_specs.json
 vendor/etc/media_holi/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 -vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
+vendor/etc/video_system_specs.json
 vendor/lib/libmmosal.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_basecodec.so
@@ -758,6 +757,7 @@ vendor/lib/libqcodec2_mockfilter.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libmmosal.so
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_basecodec.so
 vendor/lib64/libqcodec2_core.so
@@ -766,7 +766,6 @@ vendor/lib64/libqcodec2_mockfilter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
-vendor/lib64/libmmosal.so
 
 # Media (configs)
 vendor/etc/media_codecs.xml
@@ -1033,7 +1032,6 @@ vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
-vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
@@ -1078,6 +1076,7 @@ vendor/etc/qcril_database/upgrade/ecc/9_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql
+vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
@@ -1257,7 +1256,6 @@ vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
-vendor/etc/sensors/hals.conf
 vendor/etc/sensors/proto/descriptor.proto
 vendor/etc/sensors/proto/mot_barocal.proto
 vendor/etc/sensors/proto/mot_camgest.proto
@@ -1347,6 +1345,7 @@ vendor/etc/sensors/proto/sns_tilt_to_wake.proto
 vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/proto/tcs3708.proto
+vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
 # Snapdragon Computer Vision Engine
