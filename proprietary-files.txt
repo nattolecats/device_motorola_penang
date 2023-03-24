@@ -721,6 +721,26 @@ vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/powerhint.xml
+vendor/lib/libperfconfig.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libperfioctl.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib/libqti-utils.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libperfconfig.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libperfioctl.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-util.so
+vendor/lib64/libqti-utils.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 
 # Perf LM
 vendor/etc/lm/prekill/prekill_2GB.data
@@ -986,7 +1006,7 @@ system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-teleph
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
--system_ext/priv-app/ims/ims.apk|10293adf1bc2898d9d164b8853bf64ef215c1bec
+-system_ext/priv-app/ims/ims.apk|5e997b35b17e82c4e48d95a34d81e0ce28e2fd9e
 
 # RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
@@ -1583,7 +1603,7 @@ vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/liblearningmodule.so
+
 vendor/lib64/liblistensoundmodel2.so
 
 vendor/lib64/libloc_api_v02.so
@@ -1596,7 +1616,7 @@ vendor/lib64/liblowi_wifihal.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmdsprpc.so
-vendor/lib64/libmeters.so
+
 vendor/lib64/libmfec.so
 vendor/lib64/libminksocket.so
 vendor/lib64/libmm-color-convertor.so
@@ -1626,9 +1646,6 @@ vendor/lib64/libopestriping.so
 vendor/lib64/libops.so
 vendor/lib64/libos.so
 vendor/lib64/libpasrutils.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libq3dtools_adreno.so
@@ -1646,10 +1663,7 @@ vendor/lib64/libqmiextservices.so
 
 vendor/lib64/libqtbase.so
 
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/libqti-utils.so
+
 
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libqtjsonhelper.so
@@ -1768,8 +1782,6 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
@@ -2010,9 +2022,7 @@ vendor/lib/libos.so
 vendor/lib/libpasrutils.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libperfioctl.so
+
 vendor/lib/libperipheral_client.so
 vendor/lib/libpkip.so
 vendor/lib/libpowercallback.so
@@ -2040,10 +2050,6 @@ vendor/lib/libqrtrclient.so
 
 vendor/lib/libqsocket.so
 vendor/lib/libqtbase.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib/libqti-utils.so
 
 vendor/lib/libqtikeymaster4.so
 vendor/lib/libqtjsonhelper.so
@@ -2169,8 +2175,7 @@ vendor/lib/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib/vendor.qti.imsrtpservice@3.0.so
 vendor/lib/vendor.qti.latency@2.0.so
 vendor/lib/vendor.qti.latency@2.1.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
+
 vendor/lib/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib/vendor.qti.qspmhal@1.0.so
