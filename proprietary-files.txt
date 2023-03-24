@@ -77,6 +77,21 @@ vendor/etc/sound_trigger_platform_info.xml
 vendor/firmware/aw882xx_pid_2113_acf.bin
 
 # Audio (libraries)
+vendor/lib/libacdb-fts.so
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libadsprpc.so
+vendor/lib/libaudcal.so
+vendor/lib/libqtigef.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libqtigef.so
 
 # Audio (soundfx)
 vendor/lib/soundfx/libasphere.so
@@ -1400,14 +1415,12 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libQTEEConnector_listener.so
 
 vendor/lib64/libVkLayer_q3dtools.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
+
+
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libadspd.so
-vendor/lib64/libadsprpc.so
+
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libaoa.so
@@ -1416,7 +1429,7 @@ vendor/lib64/libarcsoft_dual_zoomtranslator.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
-vendor/lib64/libaudcal.so
+
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
@@ -1559,7 +1572,7 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
-vendor/lib64/libqtigef.so
+
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libqtjsonhelper.so
 vendor/lib64/libqtnodes.so
@@ -1808,17 +1821,15 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/libQTEEConnector_listener.so
 vendor/lib/libQTEEConnector_vendor.so
 vendor/lib/libVkLayer_q3dtools.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
+
+
+
 vendor/lib/libadpcmdec.so
 vendor/lib/libadreno_app_profiles.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadspd.so
-vendor/lib/libadsprpc.so
+
 vendor/lib/libaidenoiser.so
 vendor/lib/libaidenoiserv2.so
 vendor/lib/libandroidicu.so
@@ -1827,7 +1838,7 @@ vendor/lib/libarcsoft_dual_zoomtranslator.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
 vendor/lib/libasn1crtx.so
-vendor/lib/libaudcal.so
+
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
@@ -1993,7 +2004,7 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
-vendor/lib/libqtigef.so
+
 vendor/lib/libqtikeymaster4.so
 vendor/lib/libqtjsonhelper.so
 vendor/lib/libqtnodes.so
