@@ -627,6 +627,26 @@ vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 
 # Listen
+vendor/lib/libadpcmdec.so
+vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2svarnn.so
+vendor/lib/libcapiv2vop.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/liblistensoundmodel2.so
+vendor/lib/libmulawdec.so
+vendor/lib/libsmwrapper.so
+vendor/lib64/libcapiv2svacnn.so
+vendor/lib64/libcapiv2svarnn.so
+vendor/lib64/libcapiv2vop.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs-osal.so
+vendor/lib64/libgcs.so
+vendor/lib64/liblistensoundmodel2.so
+vendor/lib64/libmulawdec.so
 
 # Media
 system_ext/lib/libmmosal.so
@@ -1571,9 +1591,7 @@ vendor/lib64/libbt-hidlclient.so
 
 vendor/lib64/libcacertclient.so
 
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2svarnn.so
-vendor/lib64/libcapiv2vop.so
+
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 
@@ -1604,10 +1622,7 @@ vendor/lib64/libembmsservice.so
 vendor/lib64/libfcell.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
+
 vendor/lib64/libgdtap.so
 
 vendor/lib64/libhdcpsrm.so
@@ -1626,7 +1641,7 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/liblbs_core.so
 
-vendor/lib64/liblistensoundmodel2.so
+
 
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
@@ -1655,7 +1670,6 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmot_afd.so
 vendor/lib64/libmotohid.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libmulawdec.so
 vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/libnative-api.so
@@ -1896,7 +1910,7 @@ vendor/lib/libQTEEConnector_vendor.so
 
 
 
-vendor/lib/libadpcmdec.so
+
 
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadspd.so
@@ -1923,9 +1937,7 @@ vendor/lib/libbt-hidlclient.so
 
 vendor/lib/libcacertclient.so
 
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2svarnn.so
-vendor/lib/libcapiv2vop.so
+
 vendor/lib/libcdfw.so
 vendor/lib/libcdfw_remote_api.so
 
@@ -1951,10 +1963,7 @@ vendor/lib/libdrmtime.so
 vendor/lib/libfastcrc.so
 vendor/lib/libfcell.so
 vendor/lib/libgarden.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
+
 vendor/lib/libgdtap.so
 vendor/lib/libgf_ca.so
 vendor/lib/libgf_hal.so
@@ -1974,7 +1983,6 @@ vendor/lib/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterprovision.so
 vendor/lib/libkeymasterutils.so
 vendor/lib/liblbs_core.so
-vendor/lib/liblistensoundmodel2.so
 
 vendor/lib/libloc_api_v02.so
 vendor/lib/libloc_api_wds.so
@@ -2010,7 +2018,7 @@ vendor/lib/libmot_afd.so
 vendor/lib/libmotaudioutils.so
 vendor/lib/libmotext_inf.so
 vendor/lib/libmpbase.so
-vendor/lib/libmulawdec.so
+
 vendor/lib/libmulticam_optical_zoom_control.so
 vendor/lib/libmulticam_video_optical_zoom.so
 vendor/lib/libnative-api.so
@@ -2078,7 +2086,7 @@ vendor/lib/librpmb.so
 vendor/lib/libskewknob.so
 vendor/lib/libslimclient.so
 vendor/lib/libsmemlog.so
-vendor/lib/libsmwrapper.so
+
 vendor/lib/libsn100u_fw.so
 vendor/lib/libssd.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
