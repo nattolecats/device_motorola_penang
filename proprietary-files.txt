@@ -333,6 +333,10 @@ vendor/lib64/camera/fdconfigvideolite.bin
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
 
 # Charger
 vendor/bin/charge_only_mode
@@ -378,8 +382,16 @@ vendor/etc/init/cnd.rc
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # CVP
+vendor/lib/libcvp_common.so
+vendor/lib/libcvpcpuRev_skel.so
+vendor/lib/vendor.qti.hardware.cvp@1.0.so
+vendor/lib64/libcvp_common.so
+vendor/lib64/libcvpcpuRev_skel.so
+vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # CVP firmware
 vendor/firmware/evass-lt.b00
@@ -1407,7 +1419,6 @@ vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 
 
 
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libAlacSwDec.so
@@ -1473,8 +1484,7 @@ vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
+
 vendor/lib64/libchilog.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
@@ -1486,8 +1496,7 @@ vendor/lib64/libcodec2_soft_dolby.so
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcpion.so
-vendor/lib64/libcvp_common.so
-vendor/lib64/libcvpcpuRev_skel.so
+
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libdeccfg.so
@@ -1697,7 +1706,6 @@ vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
@@ -1790,7 +1798,7 @@ vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
 
 
 
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+
 vendor/lib/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so
@@ -1875,8 +1883,7 @@ vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libcdfw.so
 vendor/lib/libcdfw_remote_api.so
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
+
 vendor/lib/libchilog.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
@@ -1886,8 +1893,7 @@ vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcpion.so
 vendor/lib/libcppf.so
-vendor/lib/libcvp_common.so
-vendor/lib/libcvpcpuRev_skel.so
+
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdataitems.so
 vendor/lib/libdiagjni.so
@@ -2128,7 +2134,7 @@ vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
 
 vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib/vendor.qti.hardware.cvp@1.0.so
+
 vendor/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
 vendor/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 vendor/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
