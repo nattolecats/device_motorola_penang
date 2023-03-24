@@ -116,8 +116,34 @@ vendor/lib64/soundfx/libswgamedap.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper_jni.so
 
 # Bluetooth (A2DP)
+vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib/btaudio_offload_if.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/libbluetooth_audio_session_qti_2_1.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Bluetooth (aptX)
 system/lib64/libaptXHD_encoder.so
@@ -1332,7 +1358,7 @@ vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
 # MESSS
-vendor/lib64/btaudio_offload_if.so
+
 
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib64/com.motorola.hardware.display.panel@1.1.so
@@ -1368,9 +1394,9 @@ vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/ftm_fm_lib.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
+
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.motorola.hardware.display.panel@1.1-impl.so
 vendor/lib64/hw/com.qti.chi.override.so
@@ -1378,11 +1404,9 @@ vendor/lib64/hw/displaypanel.default.so
 vendor/lib64/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
 vendor/lib64/hw/motorola.hardware.vibrator@1.0-impl.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+
+
+
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib64/hw/vulkan.adreno.so
@@ -1437,11 +1461,10 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so
+
 vendor/lib64/libboot_control_qti.so
 vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbtnv.so
+
 vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libcacertclient.so
 
@@ -1597,8 +1620,7 @@ vendor/lib64/libsmemlog.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 
-vendor/lib64/libsoc_helper.so
-vendor/lib64/libsoc_helper_jni.so
+
 vendor/lib64/libssd.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libstfactory-vendor.so
@@ -1672,8 +1694,7 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
@@ -1712,7 +1733,7 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 #MESSSS lib
-vendor/lib/btaudio_offload_if.so
+
 vendor/lib/com.motorola.hardware.display.panel@1.0.so
 vendor/lib/com.motorola.hardware.display.panel@1.1.so
 vendor/lib/com.qti.chiusecaseselector.so
@@ -1755,9 +1776,8 @@ vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/ftm_fm_lib.so
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
+
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib/hw/com.motorola.hardware.display.panel@1.1-impl.so
@@ -1767,11 +1787,9 @@ vendor/lib/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
 vendor/lib/hw/motorola.hardware.vibrator@1.0-impl.so
 vendor/lib/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+
+
+
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
@@ -1846,11 +1864,9 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libbase64.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libbitmlenginev2.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
+
 vendor/lib/libboot_control_qti.so
 vendor/lib/libbt-hidlclient.so
-vendor/lib/libbtnv.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libcacertclient.so
 
@@ -2034,8 +2050,6 @@ vendor/lib/libsmwrapper.so
 vendor/lib/libsn100u_fw.so
 vendor/lib/libsnapdragoncolor-manager.so
 vendor/lib/libsnapdragoncolor-qdcm.so
-vendor/lib/libsoc_helper.so
-vendor/lib/libsoc_helper_jni.so
 vendor/lib/libssd.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libstfactory-vendor.so
@@ -2111,8 +2125,7 @@ vendor/lib/vendor.qti.gnss@4.0-service.so
 vendor/lib/vendor.qti.gnss@4.0.so
 vendor/lib/vendor.qti.hardware.alarm@1.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+
 vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib/vendor.qti.hardware.cvp@1.0.so
