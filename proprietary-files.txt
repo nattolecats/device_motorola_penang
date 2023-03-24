@@ -540,6 +540,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GNSS
 -vendor/app/CACertService/CACertService.apk
@@ -625,6 +626,10 @@ vendor/etc/msm_irqbalance.conf
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
 
 # Listen
 vendor/lib/libadpcmdec.so
@@ -1536,7 +1541,7 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/ftm_fm_lib.so
 
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
 
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.motorola.hardware.display.panel@1.1-impl.so
@@ -1636,9 +1641,7 @@ vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/libjpege.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
+
 vendor/lib64/liblbs_core.so
 
 
@@ -1701,7 +1704,7 @@ vendor/lib64/libqtbase.so
 
 
 
-vendor/lib64/libqtikeymaster4.so
+
 vendor/lib64/libqtjsonhelper.so
 vendor/lib64/libqtnodes.so
 vendor/lib64/libqttestclient.so
@@ -1860,7 +1863,6 @@ vendor/lib/com.qualcomm.qti.uceservice@2.2.so
 vendor/lib/com.qualcomm.qti.uceservice@2.3.so
 
 vendor/lib/ftm_fm_lib.so
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
@@ -1979,9 +1981,6 @@ vendor/lib/libizat_client_api.so
 vendor/lib/libizat_core.so
 vendor/lib/libjnihelper.so
 vendor/lib/libjpege.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
 vendor/lib/liblbs_core.so
 
 vendor/lib/libloc_api_v02.so
@@ -2067,7 +2066,6 @@ vendor/lib/libqrtrclient.so
 vendor/lib/libqsocket.so
 vendor/lib/libqtbase.so
 
-vendor/lib/libqtikeymaster4.so
 vendor/lib/libqtjsonhelper.so
 vendor/lib/libqtnodes.so
 vendor/lib/libqttestclient.so
