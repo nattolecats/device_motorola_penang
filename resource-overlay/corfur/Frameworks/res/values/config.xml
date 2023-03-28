@@ -33,6 +33,8 @@
         <item>1250</item>
         <item>3500</item>
         <item>5500</item>
+        <item>10000</item>
+        <item>20000</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -49,15 +51,17 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>5</item>
-        <item>12</item>
-        <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
-        <item>192</item>
-        <item>252</item>
-        <item>500</item>
+        <item>3</item>
+        <item>16</item>
+        <item>40</item>
+        <item>79</item>
+        <item>92</item>
+        <item>124</item>
+        <item>165</item>
+        <item>214</item>
+        <item>296</item>
+        <item>346</item>
+        <item>450</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -66,14 +70,16 @@
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
         <item>0</item>
-        <item>4</item>
-        <item>7</item>
-        <item>13</item>
-        <item>51</item>
-        <item>59</item>
-        <item>82</item>
-        <item>102</item>
-        <item>138</item>
+        <item>2</item>
+        <item>9</item>
+        <item>22</item>
+        <item>45</item>
+        <item>52</item>
+        <item>70</item>
+        <item>93</item>
+        <item>121</item>
+        <item>168</item>
+        <item>196</item>
         <item>255</item>
     </integer-array>
 
@@ -86,15 +92,17 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>0</item>
-        <item>5</item>
-        <item>12</item>
-        <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
-        <item>192</item>
-        <item>252</item>
-        <item>500</item>
+        <item>3</item>
+        <item>16</item>
+        <item>40</item>
+        <item>79</item>
+        <item>92</item>
+        <item>124</item>
+        <item>165</item>
+        <item>214</item>
+        <item>296</item>
+        <item>346</item>
+        <item>450</item>
     </array>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
@@ -126,7 +134,14 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -34,0 L -34,100 L 34,100 L 34,0 Z</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">
+        M 0,0
+        h -34
+        v 100
+	h 70
+	v -100
+	Z
+	</string>
 
 	<!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
@@ -185,50 +200,38 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
-
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">4</integer>
+    <integer name="config_screenBrightnessDim">3</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <integer name="config_screenBrightnessSettingMinimum">3</integer>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>67</item>
+        <item>43</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>67</item>
+        <item>30</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
         <item>0</item>
-        <item>30</item>
+        <item>26</item>
     </integer-array>
 
-    <!-- Vibrator pattern for feedback about booting with safe mode enabled -->
-    <integer-array name="config_safeModeEnabledVibePattern">
-        <item>0</item>
-        <item>0</item>
-        <item>94</item>
-    </integer-array>
+    <!-- True if the device supports system navigation keys. -->
+    <bool name="config_supportSystemNavigationKeys">true</bool>
 
-    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
-    <integer-array name="config_scrollBarrierVibePattern">
-        <item>0</item>
-        <item>15</item>
-        <item>30</item>
-        <item>15</item>
-    </integer-array>
+    <!-- Specify if the fingerprint hardware support gestures-->
+    <bool name="config_fingerprintSupportsGestures">true</bool>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
@@ -253,32 +256,9 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- The default refresh rate for a given device. Change this value to set a higher default
-         refresh rate. If the hardware composer on the device supports display modes with a higher
-         refresh rate than the default value specified here, the framework may use those higher
-         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
-         setFrameRate().
-         If a non-zero value is set for config_defaultPeakRefreshRate, then
-         config_defaultRefreshRate may be set to 0, in which case the value set for
-         config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">0</integer>
-
-    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
-         the framework from using higher refresh rates, even if display modes with higher refresh
-         rates are available from hardware composer. Only has an effect if the value is
-         non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">60</integer>
-
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent" translatable="false">motog715G</string>
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
 
-    <!-- List supported color modes. -->
-    <integer-array name="config_availableColorModes">
-        <item>0</item> <!-- COLOR_MODE_NATURAL -->     <!-- This uses colorimetric render intents-->
-        <item>1</item> <!-- COLOR_MODE_BOOSTED -->     <!-- This applies a 10% boost using the PCC-->
-        <item>2</item> <!-- COLOR_MODE_SATURATED -->
-        <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->   <!-- This uses enhanced render intents-->
-    </integer-array>
 </resources>

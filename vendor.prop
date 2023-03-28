@@ -1,7 +1,7 @@
 # Audio
-aaudio.mmap_policy=2
-aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
 persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
 persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
 persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
@@ -24,16 +24,12 @@ persist.vendor.audio.avs.afe_api_version=2
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.voicecall.speaker.stereo=true
 persist.vendor.audio.ha_proxy.enabled=true
-persist.vendor.audio_fx.current=dolby
-ro.vendor.dolby.dax.version=DAX3_3.7.1.0_r1
-ro.vendor.dolby.no_custom_profile=true
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 ro.audio.monitorRotation=true
 ro.vendor.audio.sdk.fluence.nn.enabled=true
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
-vendor.audio.adm.buffering.ms=2
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
@@ -50,13 +46,15 @@ vendor.audio.safx.pbe.enabled=false
 vendor.audio.screen_record=true
 vendor.audio.snd_card.open.retries=50
 vendor.audio.spkr_prot.tx.sampling_rate=48000
+vendor.audio.tunnel.encode=false
+vendor.audio.usb.disable.sidetone=true
 vendor.audio.use.sw.alac.decoder=false
 vendor.audio.use.sw.ape.decoder=false
 vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
+vendor.audio_hal.period_size=192
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
-vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
 # Audio feature
@@ -109,58 +107,27 @@ ro.config.vc_call_vol_steps=8
 
 # Bluetooth
 bluetooth.device.default_name=moto g71 5G
-bluetooth.device.class_of_device=90,2,12
-bluetooth.hardware.power.idle_cur_ma=6
-bluetooth.hardware.power.operating_voltage_mv=3700
-bluetooth.hardware.power.rx_cur_ma=28
-bluetooth.hardware.power.tx_cur_ma=36
-bluetooth.profile.asha.central.enabled?=true
-bluetooth.profile.a2dp.source.enabled?=true
-bluetooth.profile.avrcp.target.enabled?=true
-bluetooth.profile.bas.client.enabled?=true
-bluetooth.profile.gatt.enabled?=true
-bluetooth.profile.hfp.ag.enabled?=true
-bluetooth.profile.hid.device.enabled?=true
-bluetooth.profile.hid.host.enabled?=true
-bluetooth.profile.map.server.enabled?=true
-bluetooth.profile.opp.enabled?=true
-bluetooth.profile.pan.nap.enabled?=true
-bluetooth.profile.pan.panu.enabled?=true
-bluetooth.profile.pbap.server.enabled?=true
-bluetooth.profile.sap.server.enabled?=true
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lc3
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
-persist.vendor.btstack.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
+persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
-persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
-persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
-persist.vendor.qcom.bluetooth.scram.enabled=false
-persist.vendor.qcom.bluetooth.soc=moselle
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+persist.vendor.qcom.bluetooth.scram.enabled=false
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
-vendor.qcom.bluetooth.soc=moselle
+ro.vendor.bluetooth.wipower=false
+vendor.qcom.bluetooth.soc=hastings
 
 # Camera
 camera.disable_zsl_mode=1
+persist.vendor.camera.privapp.list=com.motorola.camera3
 persist.vendor.camera.physical.num=4
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
-
-# Dalvik
-dalvik.vm.dex2oat-threads=6
-dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapmaxfree=32m
-dalvik.vm.heapminfree=8m
-dalvik.vm.heapsize=512m
-dalvik.vm.heapstartsize=16m
-dalvik.vm.heaptargetutilization=0.5
 
 # Display
 vendor.display.comp_mask=0
@@ -171,9 +138,8 @@ vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.enable_async_powermode=1
 vendor.display.enable_early_wakeup=1
-vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=1
-vendor.display.hwc_disable_hdr=0
+vendor.display.hwc_disable_hdr=1
 vendor.display.use_smooth_motion=1
 
 # DPM
@@ -214,8 +180,8 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=false
+ro.surface_flinger.has_wide_color_display=false
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
@@ -317,18 +283,16 @@ debug.stagefright.c2inputsurface=-1
 
 # Surfaceflinger
 ro.sf.lcd_density=420
+ro.surface_flinger.has_HDR_display=false
+ro.surface_flinger.has_wide_color_display=false
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_idle_timer_ms=250
-ro.surface_flinger.set_touch_timer_ms=1000
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.use_smart_90_for_video=true
-ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # USB
 sys.usb.mtp.batchcancel=1

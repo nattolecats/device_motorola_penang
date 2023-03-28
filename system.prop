@@ -1,11 +1,3 @@
-# Audio
-audio.deep_buffer.media=true
-audio.offload.disable=false
-audio.offload.gapless.enabled=false
-audio.offload.min.duration.secs=60
-audio.offload.video=false
-media.aac_51_output_enabled=true
-
 # Charger
 ro.charger.enable_suspend=1
 
@@ -23,9 +15,6 @@ persist.data.df.dl_mode=5
 persist.data.df.iwlan_mux=9
 persist.data.df.mux_count=8
 persist.data.df.ul_mode=5
-
-# DPM
-persist.vendor.dpm.feature=11
 
 # Google
 ro.opa.device_model_id=motorola-corfur
