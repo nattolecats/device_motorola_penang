@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.corfur",
+    name: "libgptutils.cypfr",
     vendor: true,
     recovery_available: true,
     shared_libs: [

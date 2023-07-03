@@ -37,21 +37,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    FrameworksResCommon_Sys \
-    CarrierConfigResCommon_Sys \
-    CellBroadcastReceiverResCommon_Sys \
-    SystemUIResCommon_Sys \
-    TelecommResCommon_Sys \
-    TelephonyResCommon_Sys \
-    WifiResCommon_Sys \
-    FrameworksResTarget \
-    WifiResTarget
-
-PRODUCT_PACKAGES += \
-    FrameworksResCorfur \
-    LineageSystemUICorfur \
-    SettingsProviderResCorfur \
-    SystemUIResCorfur
+    FrameworksResCypfr \
+    LineageSystemUICypfr \
+    SettingsProviderResCypfr \
+    SystemUIResCypfr
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -81,7 +70,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service \
     bootctrl.holi \
-    bootctrl.holi.recovery
+    bootctrl.holi.recovery \
+    libgptutils.cypfr
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -187,8 +177,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    com.motorola.hardware.biometric.fingerprint@1.0.vendor
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -196,7 +185,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
     gnss@2.0-base.policy \
     gnss@2.0-xtra-daemon.policy \
@@ -205,8 +193,7 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libgnsspps \
-    libsynergy_loc_api
+    libgnsspps
 
 PRODUCT_PACKAGES += \
     apdr.conf \
@@ -257,7 +244,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
-#    vendor.lineage.livedisplay@2.1-service.corfur
+#    vendor.lineage.livedisplay@2.1-service.cypfr
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -273,11 +260,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
-
-# Moto hardware
-PRODUCT_PACKAGES += \
-    MotoActions \
-    MotoCommonOverlay
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -458,7 +440,6 @@ PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libqsap_sdk \
     libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
@@ -488,4 +469,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)
+$(call inherit-product, vendor/motorola/cypfr/cypfr-vendor.mk)

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "SettingsProviderResCorfur",
+    name: "SystemUIResCypfr",
     sdk_version: "current",
     vendor: true
 }
