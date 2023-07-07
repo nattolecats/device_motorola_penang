@@ -396,6 +396,7 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     group nfc
     user system
     oneshot
+    disabled
 
 service iop /system/vendor/bin/iop
     class main
@@ -432,6 +433,15 @@ service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     group log sdcard_rw sdcard_r diag
     ioprio rt 4
     disabled
+
+on property:ro.vendor.hw.nfc=nxp
+    start nqnfcinfo
+
+on property:ro.vendor.hw.nfc=ese_nq
+    start nqnfcinfo
+
+on property:ro.vendor.hw.nfc=ese_nxp
+    start nqnfcinfo
 
 on property:ro.vendor.iocgrp.config=1
     mkdir /dev/blkio
