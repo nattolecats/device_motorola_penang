@@ -8,6 +8,8 @@ BOARD_VENDOR := motorola
 
 DEVICE_PATH := device/motorola/cypfr
 
+PRODUCT_PLATFORM_MOT := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
