@@ -18,6 +18,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 420dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -99,7 +102,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
-    audio.primary.holi \
     audio.r_submix.default \
     audio.usb.default \
     libaudiopreprocessing \
@@ -108,8 +110,6 @@ PRODUCT_PACKAGES += \
     libdynproc \
     libeffectproxy \
     libldnhncr \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
     libreverbwrapper \
     libvisualizer \
     sound_trigger.primary.holi
@@ -288,14 +288,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libstagefrighthw
+    libcodec2_vndk.vendor
 
 # Perf
 PRODUCT_PACKAGES += \
