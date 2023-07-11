@@ -20,6 +20,11 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g52j 5G
 
+# Gapps
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_GAPPS_ARCH := arm64
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

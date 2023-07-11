@@ -467,6 +467,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# Gapps
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+
 # FeliCa
 $(call inherit-product, vendor/motorola/cypfr-felica/device.mk)
 
