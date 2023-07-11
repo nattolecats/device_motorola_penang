@@ -200,6 +200,10 @@ TARGET_RECOVERY_FSTAB := device/motorola/sm4350-common/rootdir/fstab_dynamic_sys
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cypfr
+TARGET_RECOVERY_DEVICE_MODULES := libinit_cypfr
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
