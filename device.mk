@@ -467,5 +467,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# FeliCa
+$(call inherit-product, vendor/motorola/cypfr-felica/device.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/cypfr/cypfr-vendor.mk)
