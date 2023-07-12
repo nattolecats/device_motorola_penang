@@ -49,7 +49,9 @@ PRODUCT_PACKAGES += \
     FrameworksResCypfr \
     LineageSystemUICypfr \
     SettingsProviderResCypfr \
-    SystemUIResCypfr
+    SystemUIResCypfr \
+    TelephonyResCommon_Sys \
+    CarrierConfigResCommon_Sys
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
