@@ -469,6 +469,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# FM radio
+PRODUCT_PACKAGES += \
+    FMRadio
+
+# Moto Action
+PRODUCT_PACKAGES += \
+    MotoActions
+
 # Gapps
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
