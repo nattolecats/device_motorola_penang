@@ -17,4 +17,4 @@ The moto g52j 5G Codename is cypfr
 | Camera (Front)          | 13 MP, f/2.2                                                                                                                   |
 
 ## What doesn't work?
-**WIP:** AOSP recovery, Bluetooth connection. others are fine so far.
+**WIP:** AOSP recovery, Bluetooth connection, FM radio. others are fine so far.
