@@ -51,7 +51,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderResCypfr \
     SystemUIResCypfr \
     TelephonyResCommon_Sys \
-    CarrierConfigResCommon_Sys
+    CarrierConfigResCommon_Sys \
+    RegulatoryInfoOverlayCypfr
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
