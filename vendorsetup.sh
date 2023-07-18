@@ -17,7 +17,13 @@ if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motoro
 MOTO=packages/apps/MotoActions/Android.mk
 if ! [ -a $MOTO ]; then git clone https://github.com/nattolecats/packages_apps_MotoActions packages/apps/MotoActions ; fi
 
-GAPPS=vendor/gapps/Makefile
-if ! [ -a $GAPPS ]; then git clone https://gitlab.com/MindTheGapps/vendor_gapps vendor/gapps ; fi
+COMMON=device/motorola/common/common.mk
+if ! [ -a $COMMON ]; then git clone https://github.com/moto-common/android_device_motorola_common device/motorola/common ; fi
+
+PLATFORM_COMMON=device/motorola/sm4350-common/platform.mk
+if ! [ -a $PLATFORM_COMMON ]; then git clone https://github.com/moto-common/android_device_motorola_sm4350-common device/motorola/sm4350-common ; fi
+
+KERNEL_HEADERS=device/motorola/sm4350-common-kernel/kernel-headers
+if ! [ -a $KERNEL_HEADERS ]; then git clone https://github.com/moto-common/android_device_motorola_sm4350-common-kernel device/motorola/sm4350-common-kernel ; fi
 
 return
