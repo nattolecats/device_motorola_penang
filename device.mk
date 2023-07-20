@@ -26,6 +26,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Product characteristics
+PRODUCT_CHARACTERISTICS := default
+
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -76,17 +79,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     $(LOCAL_PATH)/configs/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
-# Boot control
+# A/B
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service \
     bootctrl.holi \
-    bootctrl.holi.recovery \
+    bootctrl.holi.recovery
+
+# Update engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier \
     libgptutils.cypfr
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    update_engine_client
 
 # Ant
 PRODUCT_PACKAGES += \
@@ -184,6 +193,7 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
 # Fingerprint
@@ -229,7 +239,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
@@ -428,6 +438,12 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+
+# Recovery
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.recovery.usb.vid=22B8 \
+    ro.recovery.usb.adb.pid=2E81 \
+    ro.recovery.usb.fastboot.pid=2E81
 
 # Vendor service manager
 PRODUCT_PACKAGES += \

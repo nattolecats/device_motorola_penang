@@ -14,16 +14,16 @@ PRODUCT_PLATFORM_MOT := true
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
+TARGET_CPU_ABI2 := 
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := kryo385
+TARGET_CPU_VARIANT_RUNTIME := kryo300
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
-TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := cypfr
@@ -36,18 +36,25 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
+
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8
+BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0x04C8C000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3
 BOARD_KERNEL_CMDLINE += swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket
-BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1
-BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=8
-BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=cypfr
+BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += androidboot.hab.csv=7
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=cypfr
+BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
+BOARD_KERNEL_CMDLINE += buildvariant=user
+
+# Permissive
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -55,7 +62,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
 TARGET_KERNEL_SOURCE := kernel/motorola/msm-5.4
-#TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
+TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
 
 BOARD_KERNEL_BINARIES := kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
@@ -69,7 +76,8 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(wildcard $(DEVICE_PATH)-kernel/modules/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)-kernel/modules/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOARD_VENDOR_KERNEL_MODULES_LOAD)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -86,7 +94,6 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor \
     vendor_boot
 
 # Audio
@@ -149,14 +156,7 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 102247673856
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
-
-ifeq ($(WITH_GMS),true) # With gapps, reserve 1.2GB free space each
-BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1288490188
-else # Otherwise reserve 1GB free space each
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1073741824
-endif
-
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 2684354560
 BOARD_SYSTEM_EXTIMAGE_PARTITION_SIZE := 1073741824
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 
@@ -168,10 +168,10 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
-BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext vendor
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext# vendor
 BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
-BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 6227702579
-BOARD_SUPER_PARTITION_SIZE := 14512291840
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 7092826112
+BOARD_SUPER_PARTITION_SIZE := 107079512064
 
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
@@ -196,7 +196,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
-TARGET_RECOVERY_FSTAB := device/motorola/sm4350-common/rootdir/fstab_dynamic_system_ext_ufs.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc
 
@@ -211,7 +211,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2023-01-01
 
 # SELinux
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy/SEPolicy.mk
 TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
