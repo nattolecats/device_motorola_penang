@@ -5,3 +5,22 @@ audio.record.delay=180
 persist.bluetooth.system_audio_hal.enabled=1
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=false
+
+# RIL
+ril.ecclist=911,112
+ril.ecclist1=911,112
+ril.subscription.types=RUIM
+vendor.radio.db_state=3
+vendor.radio.qcril_pre_init_lock_held=0
+vendor.ril.baseband.config.ver_num=07.37
+vendor.ril.baseband.config.version=CYPFR_JAPANDSDS_CUST
+vendor.ril.baseband.rfcable.status=0
+vendor.ril.gsm.version.baseband=M6375_HI431_48.1267.02.21R
+vendor.ril.lte.bc.config=0
+vendor.ril.radio.ctbk_inst=1438
+vendor.ril.radio.ctbk_val=1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1
+vendor.ril.radio.sar_sensor_distance=5,-1,1,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1
+persist.vendor.radio.qcril_uim_vcc_feature=1
+persist.vendor.radio.ril_payload_on=0
+persist.vendor.radio.mcfg_ver_num=0,0
+persist.vendor.radio.mcfg_version=null,null

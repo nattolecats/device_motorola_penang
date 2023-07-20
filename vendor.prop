@@ -106,7 +106,7 @@ ro.config.media_vol_steps=30
 ro.config.vc_call_vol_steps=8
 
 # Bluetooth
-bluetooth.device.default_name=moto g71 5G
+bluetooth.device.default_name=moto g52j 5G
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
@@ -210,7 +210,8 @@ ro.mot.build.customerid=global
 
 # NFC
 ro.nfc.port=I2C
-ro.vendor.hw.nfc=st
+ro.vendor.hw.nfc=ese_nq
+persist.nfc_cfg.config_file_name=libnfc-nci_SN100.conf
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
