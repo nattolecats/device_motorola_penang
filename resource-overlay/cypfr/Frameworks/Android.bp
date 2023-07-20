@@ -1,5 +1,5 @@
 runtime_resource_overlay {
     name: "FrameworksResCypfr",
     sdk_version: "current",
-    vendor: true
+    product_specific: true
 }
