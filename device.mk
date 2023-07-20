@@ -51,6 +51,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResCypfr \
     EvolutionSystemUICypfr \
+    EvolutionSettingsCypfr \
     SettingsProviderResCypfr \
     SystemUIResCypfr \
     TelephonyResCommon_Sys \
