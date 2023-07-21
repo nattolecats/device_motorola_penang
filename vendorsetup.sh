@@ -35,4 +35,7 @@ if ! [ -a $PLATFORM_COMMON ]; then git clone https://github.com/moto-common/andr
 KERNEL_HEADERS=device/motorola/sm4350-common-kernel/kernel-headers
 if ! [ -a $KERNEL_HEADERS ]; then git clone https://github.com/moto-common/android_device_motorola_sm4350-common-kernel device/motorola/sm4350-common-kernel ; fi
 
+LOGCAT=packages/apps/Matlog/Android.bp
+if ! [ -a $LOGCAT ]; then git clone https://github.com/crdroidandroid/android_packages_apps_Matlog packages/apps/Matlog ; fi
+
 return

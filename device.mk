@@ -518,6 +518,11 @@ ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 endif
 
+# For debugging
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += MatLog
+endif
+
 # FeliCa
 $(call inherit-product, vendor/motorola/cypfr-felica/device.mk)
 
