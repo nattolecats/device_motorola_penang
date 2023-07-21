@@ -253,6 +253,12 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/*.rc),\
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/bin/$(notdir $f)))
 
+# Recovery init scripts
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+    init.recovery.usb.rc \
+    init.recovery.qcom.sh
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
