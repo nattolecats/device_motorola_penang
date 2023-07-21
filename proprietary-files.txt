@@ -1439,6 +1439,11 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
+# EUICC
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+product/etc/permissions/android.hardware.telephony.euicc.xml
+product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
+
 # IMS
 etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar

@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
     SystemUIResCypfr \
     TelephonyResCommon_Sys \
     CarrierConfigResCommon_Sys \
-    RegulatoryInfoOverlayCypfr
+    RegulatoryInfoOverlayCypfr \
+    EUICCOverlayCypfr
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
