@@ -40,6 +40,9 @@ ro.vendor.use_data_netmgrd=true
 # Radio
 ro.telephony.default_network=33,33
 
+# e-SIM
+masterclear.allow_retain_esim_profiles_after_fdr=1
+
 # RTT
 config.disable_rtt=true
 
