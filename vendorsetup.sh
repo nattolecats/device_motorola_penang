@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Guard
+if ! history | tail -n 1 | grep -q "cypfr"; then return; fi
+
+# This is UNOFFICIAL build.
+unset EVO_BUILD_TYPE
+
 # Go to root of source
 croot
 
