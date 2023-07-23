@@ -260,6 +260,21 @@ PRODUCT_PACKAGES += \
     init.recovery.usb.rc \
     init.recovery.qcom.sh
 
+# Recovery modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)-kernel/modules/mmi_annotate.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/mmi_annotate.ko \
+    $(LOCAL_PATH)-kernel/modules/mmi_info.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/mmi_info.ko \
+    $(LOCAL_PATH)-kernel/modules/cw2217b_fg_mmi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/cw2217b_fg_mmi.ko \
+    $(LOCAL_PATH)-kernel/modules/adapter_class.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/adapter_class.ko \
+    $(LOCAL_PATH)-kernel/modules/mmi_charger.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/mmi_charger.ko \
+    $(LOCAL_PATH)-kernel/modules/mmi_discrete_charger_class.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/mmi_discrete_charger_class.ko \
+    $(LOCAL_PATH)-kernel/modules/sgm4154x_charger.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/sgm4154x_charger.ko \
+    $(LOCAL_PATH)-kernel/modules/mmi_discrete_charger.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/mmi_discrete_charger.ko \
+    $(LOCAL_PATH)-kernel/modules/qpnp_adaptive_charge.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/qpnp_adaptive_charge.ko \
+    $(LOCAL_PATH)-kernel/modules/tcpc_class.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/tcpc_class.ko \
+    $(LOCAL_PATH)-kernel/modules/tcpc_sgm7220.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/tcpc_sgm7220.ko \
+    $(LOCAL_PATH)-kernel/modules/rt_pd_manager.ko:$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/rt_pd_manager.ko
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
