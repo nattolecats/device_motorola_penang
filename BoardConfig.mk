@@ -80,6 +80,11 @@ BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)-kernel/modules/modu
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
+# Copy recovery modules
+PRODUCT_COPY_FILES += \
+    $(foreach module,$(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD), \
+    $(DEVICE_PATH)-kernel/modules/$(module):$(TARGET_COPY_OUT_RECOVERY)/root/lib/modules/$(module))
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := holi
