@@ -15,6 +15,7 @@ The moto g52j 5G Codename is cypfr
 | Display                 | 6.8-inch, 2,460 x 1,080 (FHD+), 20:9, IPS, 120Hz refresh rate                                                                  |
 | Camera (Back)(Main)     | 50 MP, f/1.8 (main) + 8 MP, f/2.2 (ultra-wide, 118°) + 2 MP (depth sensor) + 2 MP, f/2.4 (macro)                               |
 | Camera (Front)          | 13 MP, f/2.2                                                                                                                   |
+| Additional features     | IP68 grade water/dust resistance, FeliCa, eSIM                                                                                 |
 
 ## What doesn't work?
-**WIP:** AOSP recovery, FM radio. others are fine so far.
+**WIP:** FeliCa, Fastbootd, FM radio. others are fine so far.
