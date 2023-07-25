@@ -53,9 +53,6 @@ BOARD_KERNEL_CMDLINE += androidboot.hab.product=cypfr
 BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
 BOARD_KERNEL_CMDLINE += buildvariant=user
 
-# Permissive
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -186,7 +183,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 BUILD_WITHOUT_VENDOR := true
-
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
