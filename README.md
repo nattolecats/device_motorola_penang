@@ -18,4 +18,4 @@ The moto g52j 5G Codename is cypfr
 | Additional features     | IP68 grade water/dust resistance, FeliCa, eSIM                                                                                 |
 
 ## What doesn't work?
-**WIP:** FeliCa, Fastbootd, FM radio. others are fine so far.
+**WIP:** FM radio not working. others are fine so far.
