@@ -22,6 +22,7 @@ PRODUCT_MODEL := moto g52j 5G
 
 # Evolution X stuff
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_MINI_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
