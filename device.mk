@@ -157,6 +157,10 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# GCamGo
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V3_8
+
 # Charger
 WITH_LINEAGE_CHARGER := false
 
