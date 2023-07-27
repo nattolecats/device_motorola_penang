@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCypfr \
     TelephonyResCommon_Sys \
     CarrierConfigResCommon_Sys \
+    AdaptiveSleepOverlayCypfr \
     RegulatoryInfoOverlayCypfr \
     EUICCOverlayCypfr
 
