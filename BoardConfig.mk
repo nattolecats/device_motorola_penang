@@ -184,6 +184,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BUILD_WITHOUT_VENDOR := true
 
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/sensors/dt-gesture/enable"
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
