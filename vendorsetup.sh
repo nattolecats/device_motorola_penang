@@ -20,12 +20,6 @@ if ! [ -a $KERNEL_SOURCE ]; then git clone https://github.com/nattolecats/kernel
 VENDOR=vendor/motorola/cypfr/cypfr-vendor.mk
 if ! [ -a $VENDOR ]; then git clone https://github.com/nattolecats/vendor_motorola_cypfr vendor/motorola/cypfr ; fi
 
-VENDOR_PREBUILT=vendor/motorola/cypfr-prebuilt/vendor.img
-if ! [ -a $VENDOR_PREBUILT ]; then 
-    mkdir -p vendor/motorola/cypfr-prebuilt/
-    curl -o $VENDOR_PREBUILT https://media.githubusercontent.com/media/nattolecats/vendor_motorola_cypfr-prebuilt/master/vendor.img
-fi
-
 FELICA=vendor/motorola/cypfr-felica/device.mk
 if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_cypfr-felica vendor/motorola/cypfr-felica ; fi
 
