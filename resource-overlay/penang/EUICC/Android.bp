@@ -1,0 +1,10 @@
+//
+// Copyright (C) 2023 The 2by2 Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "EUICCOverlayPenang",
+    sdk_version: "current",
+    product_specific: true,
+}

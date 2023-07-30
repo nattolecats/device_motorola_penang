@@ -49,16 +49,16 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    FrameworksResCypfr \
-    EvolutionSystemUICypfr \
-    EvolutionSettingsCypfr \
-    SettingsProviderResCypfr \
-    SystemUIResCypfr \
+    FrameworksResPenang \
+    EvolutionSystemUIPenang \
+    EvolutionSettingsPenang \
+    SettingsProviderResPenang \
+    SystemUIResPenang \
     TelephonyResCommon_Sys \
     CarrierConfigResCommon_Sys \
-    AdaptiveSleepOverlayCypfr \
-    RegulatoryInfoOverlayCypfr \
-    EUICCOverlayCypfr
+    AdaptiveSleepOverlayPenang \
+    RegulatoryInfoOverlayPenang \
+    EUICCOverlayPenang
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -95,7 +95,7 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier \
-    libgptutils.cypfr
+    libgptutils.penang
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl \
@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
-#    vendor.lineage.livedisplay@2.1-service.cypfr
+#    vendor.lineage.livedisplay@2.1-service.penang
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -530,7 +530,7 @@ PRODUCT_PACKAGES += MatLog
 endif
 
 # FeliCa
-$(call inherit-product, vendor/motorola/cypfr-felica/device.mk)
+$(call inherit-product, vendor/motorola/penang-felica/device.mk)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/cypfr/cypfr-vendor.mk)
+$(call inherit-product, vendor/motorola/penang/penang-vendor.mk)

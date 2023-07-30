@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := motorola
 
-DEVICE_PATH := device/motorola/cypfr
+DEVICE_PATH := device/motorola/penang
 PLATFORM_COMMON_PATH := device/motorola/sm4350-common
 
 PRODUCT_PLATFORM_MOT := true
@@ -27,7 +27,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := cypfr
+TARGET_BOOTLOADER_BOARD_NAME := penang
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -49,7 +49,7 @@ BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.hab.csv=7
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=cypfr
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=penang
 BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
 BOARD_KERNEL_CMDLINE += buildvariant=user
 
@@ -67,7 +67,8 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 TARGET_KERNEL_CONFIG := holi_QGKI
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
+PRODUCT_COPY_FILES += $(TARGET_PREBUILT_DTB):dtb.img
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES := \
@@ -181,7 +182,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Prebuilt vendor image
-BOARD_PREBUILT_VENDORIMAGE := $(wildcard vendor/motorola/cypfr-prebuilt/vendor.img)
+BOARD_PREBUILT_VENDORIMAGE := $(wildcard vendor/motorola/penang-prebuilt/vendor.img)
 
 ifneq (,$(BOARD_PREBUILT_VENDORIMAGE))
 BUILD_WITHOUT_VENDOR := true
@@ -215,7 +216,7 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_COMMON_PATH)/rootdir/fstab_dynamic_system_ex
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2023-01-01
+VENDOR_SECURITY_PATCH := 2023-06-01
 
 # SELinux
 include device/qcom/sepolicy/SEPolicy.mk
@@ -252,4 +253,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-include vendor/motorola/cypfr/BoardConfigVendor.mk
+include vendor/motorola/penang/BoardConfigVendor.mk

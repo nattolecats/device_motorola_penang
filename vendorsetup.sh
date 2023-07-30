@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Guard
-if ! history | tail -n 1 | grep -q "cypfr"; then return; fi
+if ! history | tail -n 1 | grep -q "penang"; then return; fi
 
 # This is UNOFFICIAL build.
 unset EVO_BUILD_TYPE
@@ -11,17 +11,17 @@ croot
 
 # Setting up repos
 
-KERNEL=device/motorola/cypfr-kernel/kernel
-if ! [ -a $KERNEL ]; then git clone https://github.com/nattolecats/device_motorola_cypfr-kernel device/motorola/cypfr-kernel ; fi
+KERNEL=device/motorola/penang-kernel/kernel
+if ! [ -a $KERNEL ]; then git clone https://github.com/nattolecats/device_motorola_penang-kernel device/motorola/penang-kernel ; fi
 
 KERNEL_SOURCE=kernel/motorola/msm-5.4
 if ! [ -a $KERNEL_SOURCE ]; then git clone https://github.com/nattolecats/kernel_motorola_msm-5.4 kernel/motorola/msm-5.4 ; fi
 
-VENDOR=vendor/motorola/cypfr/cypfr-vendor.mk
-if ! [ -a $VENDOR ]; then git clone https://github.com/nattolecats/vendor_motorola_cypfr vendor/motorola/cypfr ; fi
+VENDOR=vendor/motorola/penang/penang-vendor.mk
+if ! [ -a $VENDOR ]; then git clone https://github.com/nattolecats/vendor_motorola_penang vendor/motorola/penang ; fi
 
-FELICA=vendor/motorola/cypfr-felica/device.mk
-if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_cypfr-felica vendor/motorola/cypfr-felica ; fi
+FELICA=vendor/motorola/penang-felica/device.mk
+if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_penang-felica vendor/motorola/penang-felica ; fi
 
 MOTO=packages/apps/MotoActions/Android.mk
 if ! [ -a $MOTO ]; then git clone https://github.com/nattolecats/packages_apps_MotoActions packages/apps/MotoActions ; fi

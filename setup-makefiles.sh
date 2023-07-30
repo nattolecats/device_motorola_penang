@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=cypfr
+DEVICE=penang
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks

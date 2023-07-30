@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_cypfr.mk
+    $(LOCAL_DIR)/evolution_penang.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_cypfr-user \
-    evolution_cypfr-userdebug \
-    evolution_cypfr-eng
+    evolution_penang-user \
+    evolution_penang-userdebug \
+    evolution_penang-eng

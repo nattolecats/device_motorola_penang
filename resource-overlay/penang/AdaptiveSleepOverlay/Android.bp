@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018 The Android Open Source Project
+// Copyright (C) 2020 Raphielscape LLC. and Haruka LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,28 +14,9 @@
 // limitations under the License.
 //
 
-
-cc_library {
-    name: "libgptutils.penang",
-    vendor: true,
-    recovery_available: true,
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libz",
-    ],
-    cflags: [
-        "-Wall",
-        "-Werror",
-        "-D_BSG_FRAMEWORK_KERNEL_HEADERS",
-    ],
-    srcs: [
-        "gpt-utils.cpp",
-        "recovery-ufs-bsg.cpp",
-    ],
-    owner: "qti",
-    header_libs: [
-        "generated_kernel_headers",
-    ],
-    export_include_dirs: ["."],
+runtime_resource_overlay {
+    name: "AdaptiveSleepOverlayPenang",
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true
 }
