@@ -18,7 +18,7 @@ PRODUCT_NAME := evolution_penang
 PRODUCT_DEVICE := penang
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := moto g53j 5G
+PRODUCT_MODEL := moto g53j / g53y 5G
 
 # Evolution X stuff
 TARGET_SUPPORTS_QUICK_TAP := true
