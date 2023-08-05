@@ -106,7 +106,7 @@ ro.config.media_vol_steps=30
 ro.config.vc_call_vol_steps=8
 
 # Bluetooth
-bluetooth.device.default_name=moto g53j 5G
+bluetooth.device.default_name=moto g53j / g53y 5G
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true

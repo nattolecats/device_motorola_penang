@@ -63,6 +63,12 @@ PRODUCT_PACKAGES += \
     RegulatoryInfoOverlayPenang \
     EUICCOverlayPenang
 
+# Overlays for carrier SKU
+PRODUCT_PACKAGES += \
+    FrameworksResPenangSB \
+    SettingsProviderResPenangSB \
+    RegulatoryInfoOverlayPenangSB
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
