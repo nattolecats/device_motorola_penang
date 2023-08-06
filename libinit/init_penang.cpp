@@ -22,6 +22,9 @@ void set_variant_props(const std::string& model, const std::string& name, const 
     property_override("ro.bootimage.build.fingerprint", fingerprint);
 
     property_override("ro.build.description", desc);
+
+    // Override product first API level for avoid SN fails
+    property_override("ro.product.first_api_level", "30", true);
 }
 
 void search_variant() {
