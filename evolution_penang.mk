@@ -27,6 +27,7 @@ TARGET_BOOT_ANIMATION_RES = 720
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=penang_g \
     PRIVATE_BUILD_DESC="penang_g-user 11 T1TPS33.1-73-2-2 f8b57 release-keys"
 
 BUILD_FINGERPRINT := motorola/penang_g/penang:11/T1TPS33.1-73-2-2/f8b57:user/release-keys
