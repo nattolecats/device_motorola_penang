@@ -17,7 +17,7 @@ persist.data.df.mux_count=8
 persist.data.df.ul_mode=5
 
 # Google
-ro.opa.device_model_id=motorola-corfur
+ro.opa.device_model_id=motorola-penang
 ro.opa.eligible_device=true
 
 # HWUI
