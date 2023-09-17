@@ -67,5 +67,9 @@ persist.sys.wfd.virtual=0
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
-#Disable MTE Async for system server
+# Dex
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=quicken
+
+# Disable MTE Async for system server
 arm64.memtag.process.system_server=off
