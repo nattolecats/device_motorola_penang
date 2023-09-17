@@ -185,13 +185,16 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Prebuilt vendor image
-BOARD_PREBUILT_VENDORIMAGE := $(wildcard vendor/motorola/penang-prebuilt/vendor.img)
-
-ifneq (,$(BOARD_PREBUILT_VENDORIMAGE))
 BUILD_WITHOUT_VENDOR := true
-PRODUCT_COPY_FILES += $(BOARD_PREBUILT_VENDORIMAGE):vendor.img
+
+ifeq ($(BUILD_WITHOUT_VENDOR),true)
+BOARD_PREBUILT_VENDORIMAGE := $(wildcard vendor/motorola/penang-prebuilt/vendor.img)
+ifndef BOARD_PREBUILT_VENDORIMAGE
+$(error vendor/motorola/penang-prebuilt/vendor.img not found or empty)
 else
-BUILD_WITHOUT_VENDOR := false
+$(warning Using prebuilt vendorimage: $(BOARD_PREBUILT_VENDORIMAGE))
+PRODUCT_COPY_FILES += $(BOARD_PREBUILT_VENDORIMAGE):vendor.img
+endif
 endif
 
 # DT2W
