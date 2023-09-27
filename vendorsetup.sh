@@ -15,7 +15,7 @@ KERNEL=device/motorola/penang-kernel/kernel
 if ! [ -a $KERNEL ]; then git clone https://github.com/nattolecats/device_motorola_penang-kernel device/motorola/penang-kernel ; fi
 
 KERNEL_SOURCE=kernel/motorola/msm-5.4
-if ! [ -a $KERNEL_SOURCE ]; then git clone https://github.com/nattolecats/kernel_motorola_msm-5.4 kernel/motorola/msm-5.4 ; fi
+if ! [ -a $KERNEL_SOURCE ]; then git clone https://github.com/nattolecats/kernel_motorola_msm-5.4 kernel/motorola/msm-5.4 --depth 1 ; fi
 
 VENDOR=vendor/motorola/penang/penang-vendor.mk
 if ! [ -a $VENDOR ]; then git clone https://github.com/nattolecats/vendor_motorola_penang vendor/motorola/penang ; fi
