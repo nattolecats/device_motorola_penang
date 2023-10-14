@@ -18,4 +18,4 @@ The moto g53j / g53y 5G Codename is penang
 | Additional features     | IP52 grade water/dust resistance, FeliCa, eSIM                                                                                 |
 
 ## What doesn't work?
-**WIP:** FM radio not working. others are fine so far.
+**WIP:** **OTA update**, NFC, FM radio not working. others are fine so far.
