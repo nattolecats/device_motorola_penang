@@ -2,9 +2,9 @@
 audio.record.delay=180
 
 # Bluetooth
-persist.bluetooth.system_audio_hal.enabled=1
-persist.bluetooth.a2dp_offload.disabled=true
-ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.system_audio_hal.enabled=0
+persist.bluetooth.a2dp_offload.disabled=false
+ro.bluetooth.a2dp_offload.supported=true
 
 # RIL
 ril.ecclist=911,112
