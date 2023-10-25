@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon_Sys \
     AdaptiveSleepOverlayPenang \
     RegulatoryInfoOverlayPenang \
-    EUICCOverlayPenang
+    EUICCOverlayPenang \
+    BluetoothConfigOverlayPenang
 
 # Overlays for carrier SKU
 PRODUCT_PACKAGES += \
@@ -151,14 +152,11 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth/include
 
-# Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \
-    audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
+    BluetoothQti \
+    liba2dpoffload \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -427,7 +425,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(COMMON_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    vendor/qcom/opensource/opensource/commonsys/packages/apps/Bluetooth
 
 # Telephony
 PRODUCT_PACKAGES += \
