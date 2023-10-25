@@ -90,6 +90,12 @@ system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
 system_ext/lib64/libimsmedia_jni.so
 -system_ext/priv-app/ims/ims.apk|6ffbd49588963e65f80c00c154581253047e8e35
 
+# FM
+system_ext/lib/libfm-hci.so
+system_ext/lib/fm_helium.so
+system_ext/lib64/libfm-hci.so
+system_ext/lib64/fm_helium.so
+
 # WiFi Display
 -system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
