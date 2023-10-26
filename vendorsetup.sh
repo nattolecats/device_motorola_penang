@@ -18,8 +18,8 @@ IMAGES=device/motorola/penang-images/Android.mk
 if ! [ -a $IMAGES ]; then git clone https://github.com/nattolecats/device_motorola_penang-images device/motorola/penang-images ; fi
 bash device/motorola/penang-images/merge.sh
 
-FELICA=vendor/motorola/felica-common/device.mk
-if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_felica-common vendor/motorola/felica-common ; fi
+FELICA=vendor/motorola/felica/felica-vendor.mk
+if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_felica vendor/motorola/felica ; fi
 
 MOTO=packages/apps/MotoActions/Android.mk
 if ! [ -a $MOTO ]; then git clone https://github.com/nattolecats/packages_apps_MotoActions packages/apps/MotoActions ; fi

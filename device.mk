@@ -547,7 +547,7 @@ PRODUCT_PACKAGES += MatLog
 endif
 
 # FeliCa
-#$(call inherit-product, vendor/motorola/felica-common/device.mk)
+#$(call inherit-product, vendor/motorola/felica/felica-vendor.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/penang/penang-vendor.mk)
