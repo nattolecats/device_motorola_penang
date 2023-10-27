@@ -35,8 +35,8 @@ if ! [ -a $LOGCAT ]; then git clone https://github.com/crdroidandroid/android_pa
 QSSI=device/qcom/qssi/Android.bp
 if ! [ -a $QSSI ]; then git clone https://github.com/AOSPA/android_device_qcom_qssi device/qcom/qssi ; fi
 
-BT_APP=vendor/qcom/opensource/opensource/commonsys/packages/apps/Bluetooth/Android.bp
-if ! [ -a $BT_APP ]; then git clone https://github.com/AOSPA/android_vendor_qcom-opensource_packages_apps_Bluetooth vendor/qcom/opensource/opensource/commonsys/packages/apps/Bluetooth ; fi
+BT_APP=vendor/qcom/opensource/commonsys/packages/apps/Bluetooth/Android.bp
+if ! [ -a $BT_APP ]; then git clone https://github.com/AOSPA/android_vendor_qcom-opensource_packages_apps_Bluetooth vendor/qcom/opensource/commonsys/packages/apps/Bluetooth ; fi
 
 rm -rf packages/modules/Bluetooth/android/app/tests/unit
 

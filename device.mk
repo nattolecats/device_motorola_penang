@@ -427,7 +427,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    vendor/qcom/opensource/opensource/commonsys/packages/apps/Bluetooth
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
 
 # Telephony
 PRODUCT_PACKAGES += \
