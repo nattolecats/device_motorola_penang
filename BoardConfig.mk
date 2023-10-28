@@ -189,14 +189,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Prebuilt vendor image
-BUILD_WITHOUT_VENDOR := true
-
-ifeq ($(BUILD_WITHOUT_VENDOR),true)
-BOARD_PREBUILT_VENDORIMAGE := $(wildcard vendor/motorola/penang-prebuilt/vendor.img)
-ifndef BOARD_PREBUILT_VENDORIMAGE
-$(error vendor/motorola/penang-prebuilt/vendor.img not found or empty)
-endif
-endif
+$(call inherit-product, device/motorola/penang-images/vendor-image.mk)
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sensors/dt-gesture/enable"
