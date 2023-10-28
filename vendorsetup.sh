@@ -14,6 +14,10 @@ if ! [ -a $KERNEL_SOURCE ]; then git clone https://github.com/nattolecats/kernel
 VENDOR=vendor/motorola/penang/penang-vendor.mk
 if ! [ -a $VENDOR ]; then git clone https://github.com/nattolecats/vendor_motorola_penang vendor/motorola/penang ; fi
 
+IMAGES=device/motorola/penang-images/Android.mk
+if ! [ -a $IMAGES ]; then git clone https://github.com/nattolecats/device_motorola_penang-images device/motorola/penang-images ; fi
+bash device/motorola/penang-images/merge.sh
+
 FELICA=vendor/motorola/felica-common/device.mk
 if ! [ -a $FELICA ]; then git clone https://github.com/nattolecats/vendor_motorola_felica-common vendor/motorola/felica-common ; fi
 
