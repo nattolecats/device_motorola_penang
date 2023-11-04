@@ -279,11 +279,17 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/*.rc),\
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/bin/$(notdir $f)))
 
+# Recovery
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.recovery.usb.vid=22B8 \
+    ro.recovery.usb.adb.pid=2E81 \
+    ro.recovery.usb.fastboot.pid=2E80
+
 # Recovery init scripts
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
-    init.recovery.qcom.sh
+    init.recovery.module.sh
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -472,15 +478,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
-
-# Recovery
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.recovery.usb.vid=22B8 \
-    ro.recovery.usb.adb.pid=2E81 \
-    ro.recovery.usb.fastboot.pid=2E81
-
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.sh
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
