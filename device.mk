@@ -154,18 +154,14 @@ PRODUCT_PACKAGES += \
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth/include
 
 PRODUCT_PACKAGES += \
-    BluetoothQti \
-    liba2dpoffload \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
-    FMRecord \
     libqcomfm_jni \
-    qcom.fmradio \
-    vendor.qti.hardware.fm@1.0
+    qcom.fmradio
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -175,9 +171,9 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-# GCamGo
+# Aperture
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V3_8
+    Aperture
 
 # Charger
 WITH_LINEAGE_CHARGER := false
