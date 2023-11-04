@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "EvolutionSettingsPenang",
+    name: "LineageSettingsPenang",
     product_specific: true,
 }

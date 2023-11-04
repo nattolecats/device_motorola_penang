@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_penang.mk
+    $(LOCAL_DIR)/lineage_penang.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_penang-user \
-    evolution_penang-userdebug \
-    evolution_penang-eng
+    lineage_penang-user \
+    lineage_penang-userdebug \
+    lineage_penang-eng
