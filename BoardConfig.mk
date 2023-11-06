@@ -217,10 +217,11 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2023-06-01
 
 # SELinux
-include device/qcom/sepolicy/SEPolicy.mk
-TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SELINUX_IGNORE_NEVERALLOWS := true
+include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # SELinux permissive
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
