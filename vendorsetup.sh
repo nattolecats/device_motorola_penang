@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Guard
+if ! history | tail -n 1 | grep -q "penang"; then return; fi
+
+# This is UNOFFICIAL build.
+unset EVO_BUILD_TYPE
+
 # Go to root of source
 croot
 
@@ -35,13 +41,5 @@ if ! [ -a $KERNEL_HEADERS ]; then git clone https://github.com/moto-common/andro
 
 LOGCAT=packages/apps/Matlog/Android.bp
 if ! [ -a $LOGCAT ]; then git clone https://github.com/crdroidandroid/android_packages_apps_Matlog packages/apps/Matlog ; fi
-
-QSSI=device/qcom/qssi/Android.bp
-if ! [ -a $QSSI ]; then git clone https://github.com/AOSPA/android_device_qcom_qssi device/qcom/qssi ; fi
-
-BT_APP=vendor/qcom/opensource/commonsys/packages/apps/Bluetooth/Android.bp
-if ! [ -a $BT_APP ]; then git clone https://github.com/AOSPA/android_vendor_qcom-opensource_packages_apps_Bluetooth vendor/qcom/opensource/commonsys/packages/apps/Bluetooth ; fi
-
-rm -rf packages/modules/Bluetooth/android/app/tests/unit
 
 return

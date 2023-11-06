@@ -1,5 +1,4 @@
 /*
- *
  *  Copyright (c) 2013, The Linux Foundation. All rights reserved.
  *  Not a Contribution, Apache license notifications and license are retained
  *  for attribution purposes only.
@@ -22,34 +21,34 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#pragma push_macro("PROPERTY_VALUE_MAX")
-
-#include <cutils/properties.h>
+//#include <cutils/properties.h>
 #include <string.h>
 
-static inline const char* BtmGetDefaultName()
+static inline const char* BtmDefLocalName()
 {
-    char product_device[PROPERTY_VALUE_MAX];
-    property_get("ro.boot.hardware.sku", product_device, "");
+#if 0
+    static char product_device[PROPERTY_VALUE_MAX];
+    //Huawei-defined property
+    property_get("ro.config.marketing_name", product_device, "");
 
-    if (strstr(product_device, "XT2335-5"))
-        return "Moto g53j 5G";
-    if (strstr(product_device, "XT2335-4"))
-        return "Moto g53y 5G";
+    if (strcmp(product_device, "") != 0)
+        return product_device;
 
-    // Fallback to Moto Generic
-    return "Motorola";
+    // Fallback to ro.product.model
+    return "";
+#endif
+    return "hello";
 }
 
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-// Disables read remote device feature
-#define BTM_WBS_INCLUDED TRUE
-#define BTIF_HF_WBS_PREFERRED TRUE
+static inline int BtmBypassExtraAclSetup() {
+#if 0
+    int8_t prop = property_get_bool("persist.sys.bt_acl_bypass", false);
+    return prop == true;
+#endif
+    return 1;
+}
 
-#define BLE_VND_INCLUDED   TRUE
-// skips conn update at conn completion
-#define BT_CLEAN_TURN_ON_DISABLED 1
-
-#pragma pop_macro("PROPERTY_VALUE_MAX")
+#define BTM_DEF_LOCAL_NAME BtmDefLocalName()
+#define BTM_BYPASS_EXTRA_ACL_SETUP BtmBypassExtraAclSetup()
 
 #endif
