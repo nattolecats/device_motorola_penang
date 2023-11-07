@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libreverbwrapper \
     libvisualizer \
+    libldacBT_bco \
     sound_trigger.primary.holi
 
 PRODUCT_COPY_FILES += \
