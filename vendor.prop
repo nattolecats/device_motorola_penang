@@ -2,15 +2,16 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
-persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
-persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
-persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
-persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb
-persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
-persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
-persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
+persist.vendor.audio.calfile0=/vendor/etc/acdbdata/adsp_avs_config.acdb
+persist.vendor.audio.calfile1=/vendor/etc/acdbdata/Bluetooth_cal.acdb
+persist.vendor.audio.calfile2=/vendor/etc/acdbdata/General_cal.acdb
+persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Global_cal.acdb
+persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Handset_cal.acdb
+persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Hdmi_cal.acdb
+persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Headset_cal.acdb
+persist.vendor.audio.calfile7=/vendor/etc/acdbdata/Speaker_cal.acdb
 persist.vendor.audio.fluence.speaker=false
-persist.vendor.audio.speaker.stereo=false
+persist.vendor.audio.speaker.stereo=true
 persist.vendor.audio.dualmic.config=endfire
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
@@ -63,7 +64,7 @@ vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=false
-vendor.audio.feature.battery_listener.enable=true
+vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.compress_meta_data.enable=true
@@ -123,7 +124,7 @@ vendor.qcom.bluetooth.soc=hastings
 # Camera
 camera.disable_zsl_mode=1
 persist.vendor.camera.privapp.list=com.motorola.camera3
-persist.vendor.camera.physical.num=4
+persist.vendor.camera.physical.num=3
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
@@ -143,7 +144,7 @@ vendor.display.hwc_disable_hdr=1
 vendor.display.use_smooth_motion=1
 
 # DPM
-persist.vendor.dpm.feature=11
+persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpmhalservice.enable=1
 persist.vendor.eab.supported=1
@@ -170,7 +171,7 @@ debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.hw=0
-debug.sf.latch_unsignaled=1
+debug.sf.latch_unsignaled=0
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
@@ -198,7 +199,7 @@ persist.vendor.ims.playout_delay=50
 persist.vendor.ims.vt.enableadb=1
 
 # Incremental FS
-ro.incremental.enable=true
+ro.incremental.enable=1
 
 # Media
 debug.stagefright.ccodec=4
@@ -284,14 +285,13 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 debug.stagefright.c2inputsurface=-1
 
 # Surfaceflinger
-ro.sf.lcd_density=420
 ro.surface_flinger.has_HDR_display=false
 ro.surface_flinger.has_wide_color_display=false
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
