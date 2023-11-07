@@ -1360,6 +1360,11 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
+# EUICC
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+product/etc/permissions/android.hardware.telephony.euicc.xml
+product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
+
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
