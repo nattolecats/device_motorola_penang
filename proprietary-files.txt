@@ -1683,6 +1683,8 @@ vendor/lib64/libwvhidl.so
 vendor/bin/cnss-daemon
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
+vendor/etc/init/android.hardware.wifi@1.0-service.rc
+-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 
 # WiFi Display (system)
 -system/framework/WfdCommon.jar
