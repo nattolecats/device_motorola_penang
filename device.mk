@@ -284,24 +284,64 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mdm.sh \
-    init.mmi.boot.sh \
-    init.mmi.touch.sh \
-    init.oem.fingerprint2.sh \
-    init.oem.hw.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
+    init.mmi.shutdown.sh \
+    pstore_annotate.sh \
     init.qcom.sh \
+    init.qti.chg_policy.sh \
+    init.class_main.sh \
+    hardware_revisions.sh \
+    vendor_modprobe.sh \
+    init.qcom.post_boot.sh \
+    init.mmi.usb.sh \
+    init.qcom.usb.sh \
+    init.qti.kernel.debug-holi.sh \
+    apanic_annotate.sh \
+    init.qti.kernel.sh \
+    init.qti.qcv.sh \
+    init.crda.sh \
+    init.qti.media.sh \
+    init.kernel.post_boot.sh \
+    init.mmi.block_perm.sh \
+    init.kernel.post_boot-blair.sh \
+    init.kernel.post_boot-holi.sh \
+    init.qcom.coex.sh \
+    init.oem.fingerprint2.sh \
+    init.qti.kernel.debug.sh \
+    apanic_copy.sh \
+    init.mmi.mdlog-getlogs.sh \
+    init.mdm.sh \
+    init.qti.display_boot.sh \
     init.qti.early_init.sh \
-    init.mmi.charge_only.rc \
+    init.qcom.efs.sync.sh \
+    apanic_save.sh \
+    init.qti.kernel.debug-blair.sh \
+    init.qcom.sensors.sh \
+    init.mmi.wlan-getlogs.sh \
+    init.qcom.class_core.sh \
+    init.mmi.boot.sh \
+    init.mmi.modules.sh \
+    qca6234-service.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.sdio.sh \
+    init.oem.hw.sh \
+    init.gbmods.sh \
+    init.mmi.touch.sh
+
+PRODUCT_PACKAGES += \
+    init.target.rc \
+    init.qcom.rc \
     init.mmi.chipset.rc \
     init.mmi.debug.rc \
-    init.mmi.overlay.rc \
-    init.mmi.rc \
+    init.qti.kernel.rc \
     init.qcom.factory.rc \
-    init.qcom.rc \
-    init.target.rc
+    init.mmi.rc \
+    init.mmi.diag_mdlog.rc \
+    init.mmi.overlay.rc \
+    init.mmi.diag.rc \
+    init.qcom.usb.rc \
+    init.mmi.charge_only.rc \
+    init.mmi.usb.rc \
+    init.mmi.wlan.rc
 
 # Recovery
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
