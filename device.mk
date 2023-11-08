@@ -54,6 +54,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    FrameworksResTarget \
+    WifiResTarget \
+    CellBroadcastReceiverResCommon_Sys \
+    TelephonyResCommon_Sys \
+    CarrierConfigResCommon_Sys \
+    WifiResCommon_Sys \
+    FrameworksResCommon_Sys \
+    SystemUIResCommon_Sys \
     FrameworksResPenang \
     LineageSystemUIPenang \
     LineageSettingsPenang \
