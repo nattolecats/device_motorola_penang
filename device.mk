@@ -604,10 +604,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     MotoActions
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
-
 # Gapps
 ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
