@@ -5,6 +5,7 @@
 #
 
 COMMON_PATH := device/motorola/common
+PLATFORM_COMMON_PATH := device/motorola/sm4350-common
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1200
