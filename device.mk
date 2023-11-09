@@ -508,6 +508,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(COMMON_PATH) \
+    hardware/motorola \
     hardware/google/interfaces \
     hardware/google/pixel
 
