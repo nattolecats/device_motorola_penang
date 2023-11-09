@@ -432,6 +432,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(COMMON_PATH) \
+    hardware/motorola \
     hardware/google/interfaces \
     hardware/google/pixel
 
@@ -527,7 +528,8 @@ PRODUCT_BOOT_JARS += \
 
 # Moto Action
 PRODUCT_PACKAGES += \
-    MotoActions
+    MotoActions \
+    libqsap_sdk
 
 # Keylayout
 PRODUCT_COPY_FILES += \
