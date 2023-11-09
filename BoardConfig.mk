@@ -124,6 +124,7 @@ BOARD_USES_ALSA_AUDIO := true
 
 # FM
 BOARD_HAVE_QCOM_FM := true
+BOARD_HAS_QCA_FM_SOC := "cherokee"
 
 # Display
 TARGET_USES_COLOR_METADATA := true

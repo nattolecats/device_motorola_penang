@@ -315,3 +315,6 @@ wifi.aware.interface=wifi-aware0
 
 # Zygote
 zygote.critical_window.minute=10
+
+# FM
+ro.vendor.fm.use_audio_session=true
