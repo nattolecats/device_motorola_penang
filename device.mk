@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
-    audio.primary.holi \
     audio.r_submix.default \
     audio.usb.default \
     libaudiopreprocessing \
@@ -148,8 +147,6 @@ PRODUCT_PACKAGES += \
     libdynproc \
     libeffectproxy \
     libldnhncr \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
     libreverbwrapper \
     libvisualizer \
     libldacBT_bco \
