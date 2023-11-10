@@ -6,6 +6,6 @@
 <resources>
 
     <string name="build_maintainer_summary">lahaina</string>
-    <string name="build_maintainer_telegram">https://misskey.io/@lahaina_RMX3031</string>
+    <string name="build_maintainer_donate_url">https://misskey.io/@lahaina_RMX3031</string>
 
 </resources>
