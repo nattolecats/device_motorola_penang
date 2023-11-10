@@ -527,7 +527,8 @@ PRODUCT_BOOT_JARS += \
 
 # Moto Action
 PRODUCT_PACKAGES += \
-    MotoActions
+    MotoActions \
+    libqsap_sdk
 
 # Gapps
 ifeq ($(WITH_GMS),true)

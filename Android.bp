@@ -6,3 +6,8 @@
 
 soong_namespace {
 }
+
+cc_library_shared {
+    name: "libqsap_sdk",
+    vendor: true,
+}
