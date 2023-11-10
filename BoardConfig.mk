@@ -186,6 +186,9 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Prebuilt vendor image
+include device/motorola/penang-images/vendor-image.mk
+
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sensors/dt-gesture/enable"
 
