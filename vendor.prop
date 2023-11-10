@@ -284,7 +284,6 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 debug.stagefright.c2inputsurface=-1
 
 # Surfaceflinger
-ro.sf.lcd_density=420
 ro.surface_flinger.has_HDR_display=false
 ro.surface_flinger.has_wide_color_display=false
 ro.surface_flinger.use_color_management=true
