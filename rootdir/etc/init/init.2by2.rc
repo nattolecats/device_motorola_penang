@@ -5,9 +5,7 @@
 #
 
 on post-fs
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
-    mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
+    mount none /system/etc/audio/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
 
 on init
     setprop ro.vendor.fsg-id ${ro.boot.fsg-id}
